@@ -11,7 +11,7 @@ app.use(express.json());
 app.use("/", routes);
 try {
   await db.authenticate();
-  console.log("Conexión exitosa con la base de datos");
+  console.log(`Conexión exitosa con la base de datos en el puerto ${PORT}`);
 } catch (error) {
   console.log(`Conexión fallida, error: ${error}`);
 }
